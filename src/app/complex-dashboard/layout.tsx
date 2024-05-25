@@ -1,16 +1,21 @@
+import Card from "@/component/Card"
+
 function Layout({ 
     children,
     user,
     revenue,
-    notification
+    notification,
+    login
  }: { 
     children: React.ReactNode,
     user:React.ReactNode,
     revenue:React.ReactNode,
     notification:React.ReactNode,
+    login:React.ReactNode
  }) {
+    const isLoggedIn = true
 
-    return (
+    return isLoggedIn ?(
         <>
             <div>{children}</div>
             <div style={{display:'flex'}}>
@@ -18,10 +23,10 @@ function Layout({
                  <div>{user}</div>
                  <div>{revenue}</div>   
               </div>
-              <div style={{display:"flex", flex:1}}>{notification}</div>  
+              <div style={{display:"flex", flex:1}}>{notification}</div> 
             </div>
         </>
     )
-}
-
+    :login
+ }
 export default Layout

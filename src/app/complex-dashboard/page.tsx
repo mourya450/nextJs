@@ -1,7 +1,7 @@
 export default function Dashboard(){
     return(
         <div>
-            complex dashbpard
+            Complex dashboard
         </div>
     )
 }
